@@ -2,7 +2,7 @@ import { RiDashboardHorizontalFill } from "react-icons/ri";
 import DashboardHome from "../pages/Main/DashboardHome/DashboardHome";
 import { MdCategory } from "react-icons/md";
 import { SlBadge } from "react-icons/sl";
-import Categories from "../pages/Main/Categories/Earnings";
+import Categories from "../pages/Main/Categories/Categories";
 
 export const dashboardItems = [
   {
