@@ -1,62 +1,8 @@
-import { CiSettings, CiUser } from "react-icons/ci";
-import { GrMoney } from "react-icons/gr";
 import { RiDashboardHorizontalFill } from "react-icons/ri";
 import DashboardHome from "../pages/Main/DashboardHome/DashboardHome";
-import Guests from "../pages/Main/Users/Users";
-import MyProfile from "../pages/Profile/MyProfile";
-import EditMyProfile from "../pages/Profile/EditMyProfile";
-import TermsConditions from "../pages/Settings/TermsConditions";
-import EditTermsConditions from "../pages/Settings/EditTermsConditions";
-import PrivacyPolicy from "../pages/Settings/PrivacyPolicy";
-import EditPrivacyPolicy from "../pages/Settings/EditPrivacyPolicy";
-import { FaRegUser } from "react-icons/fa6";
-import {
-  MdOutlineSecurityUpdateWarning,
-} from "react-icons/md";
-import HostDetails from "../pages/Main/Host/HostDetails";
-import { FaServicestack } from "react-icons/fa6";
-import { BiMessageSquareDetail } from "react-icons/bi";
-import Earnings from "../pages/Main/Earnings/Earnings";
-import Setting from "../pages/Main/Setting/Setting";
-import ChangePassword from "../pages/Main/Setting/Change-password/ChangePassword";
-import ForgotPassword from "../pages/Main/Setting/Change-password/ForgotPassword";
-import VerifyEmail from "../pages/Main/Setting/Change-password/VerifyEmail";
-import Trust from "../pages/Settings/Trust";
-import EditTrust from "../pages/Settings/EditTrust";
-import { TbCoin } from "react-icons/tb";
-import { IoSettingsOutline } from "react-icons/io5";
-import { LuCrown } from "react-icons/lu";
-import Subscription from "../pages/Main/Subscription/Subscription";
-import Notifications from "../pages/Main/Notifications/Notifications";
-import AddSubscription from "../pages/Main/AddSubscription/AddSubscription";
-import EditSubscription from "../pages/Main/EditSubscription/EditSubscription";
-import { BiDish } from "react-icons/bi";
-import Meals from "../pages/Main/Meals/Meals";
-import Workouts from "../pages/Main/Workouts/Workouts";
-import { CiDumbbell } from "react-icons/ci";
-import Store from "../pages/Main/Store/Store";
-import { PiHandbagSimple } from "react-icons/pi";
-import AddMeal from "../pages/Main/AddMeal/AddMeal";
-import EditMeal from "../pages/Main/EditMeal/EditMeal";
-import EditChallenge from "../pages/Main/EditExercise/EditExercise";
-import AddWorkout from "../pages/Main/AddWorkout/AddWorkout";
-import EditWorkout from "../pages/Main/EditWorkout/EditWorkout";
-import AddBadge from "../pages/Main/AddBadge/AddBadge";
-import EditBadge from "../pages/Main/EditBadge/EditBadge";
-import { PiPersonSimpleBikeBold } from "react-icons/pi";
-import Exercise from "../pages/Main/Exercise/Exercise";
-import { MdOutlineVideoLibrary } from "react-icons/md";
-import WorkoutVideos from "../pages/Main/WorkoutVideos/WorkoutVideos";
-import EditWorkoutVideo from "../pages/Main/EditWorkoutVideo/EditWorkoutVideo";
-import AddWorkoutVideo from "../pages/Main/AddWorkoutVideo/AddWorkoutVideo";
-import WorkoutPlans from "../pages/Main/WorkoutPlans/WorkoutPlans";
-import AddExercise from "../pages/Main/AddExercise/AddExercise";
-import EditExercise from "../pages/Main/EditExercise/EditExercise";
-import AddWorkoutPlan from "../pages/Main/AddWorkoutPlan/AddWorkoutPlan";
-import EditWorkoutPlan from "../pages/Main/EditWorkoutPlan/EditWorkoutPlan";
-import { MdManageHistory } from "react-icons/md";
-import AddWorkoutVideoNormal from "../pages/Main/AddWorkoutVideo/AddWorkoutVideoNormal";
-import ResetPassword from "../pages/Main/Setting/Change-password/ResetPassword";
+import { MdCategory } from "react-icons/md";
+import { SlBadge } from "react-icons/sl";
+import Categories from "../pages/Main/Categories/Earnings";
 
 export const dashboardItems = [
   {
@@ -66,17 +12,18 @@ export const dashboardItems = [
     element: <DashboardHome />,
   },
   {
-    name: "Earnings",
-    path: "earnings",
-    icon: TbCoin,
-    element: <Earnings />,
+    name: "Categories",
+    path: "categories",
+    icon: MdCategory,
+    element: <Categories />,
   },
   {
-    name: "Users",
-    path: "users",
-    icon: FaRegUser,
-    element: <Guests />,
+    name: "Brands",
+    path: "brands",
+    icon: SlBadge,
+    element: <Categories />,
   },
+
   // {
   //   name: "Approve Request",
   //   rootPath: "approveRequest",
@@ -96,200 +43,143 @@ export const dashboardItems = [
   //     },
   //   ],
   // },
-  {
-    path: "notifications",
-    element: <Notifications />,
-  },
-  {
-    path: "add-subscription",
-    element: <AddSubscription />,
-  },
-  {
-    path: "edit-subscription",
-    element: <EditSubscription />,
-  },
-  {
-    path: "add-meal",
-    element: <AddMeal />,
-  },
-  {
-    path: "edit-meal/:mealId",
-    element: <EditMeal />,
-  },
-  {
-    path: "add-exercise",
-    element: <AddExercise />,
-  },
-  {
-    path: "edit-exercise/:exerciseId",
-    element: <EditExercise />,
-  },
-  {
-    path: "add-workout-plan",
-    element: <AddWorkoutPlan />,
-  },
-  {
-    path: "edit-workout-plan/:workoutPlanId",
-    element: <EditWorkoutPlan />,
-  },
-  {
-    path: "add-workout",
-    element: <AddWorkout />,
-  },
-  {
-    path: "edit-workout/:workoutId",
-    element: <EditWorkout />,
-  },
-  {
-    path: "add-workout-video",
-    element: <AddWorkoutVideoNormal />,
-    // element: <AddWorkoutVideo />,
-  },
-  {
-    path: "edit-workout-video/:workoutId",
-    element: <EditWorkoutVideo />,
-  },
-  {
-    path: "add-badge",
-    element: <AddBadge />,
-  },
-  {
-    path: "edit-badge/:badgeId",
-    element: <EditBadge />,
-  },
   // {
-  //   path: '/reviews',
-  //   element: <Review></Review>
+  //   path: "notifications",
+  //   element: <Notifications />,
+  // },
+  // {
+  //   path: "add-subscription",
+  //   element: <AddSubscription />,
+  // },
+  // {
+  //   path: "edit-subscription",
+  //   element: <EditSubscription />,
+  // },
+  // {
+  //   path: "add-meal",
+  //   element: <AddMeal />,
+  // },
+  // {
+  //   path: "edit-meal/:mealId",
+  //   element: <EditMeal />,
+  // },
+  // {
+  //   path: "add-exercise",
+  //   element: <AddExercise />,
+  // },
+  // {
+  //   path: "edit-exercise/:exerciseId",
+  //   element: <EditExercise />,
+  // },
+  // {
+  //   path: "add-workout-plan",
+  //   element: <AddWorkoutPlan />,
+  // },
+  // {
+  //   path: "edit-workout-plan/:workoutPlanId",
+  //   element: <EditWorkoutPlan />,
+  // },
+  // {
+  //   path: "add-workout",
+  //   element: <AddWorkout />,
+  // },
+  // {
+  //   path: "edit-workout/:workoutId",
+  //   element: <EditWorkout />,
+  // },
+  // {
+  //   path: "add-workout-video",
+  //   element: <AddWorkoutVideoNormal />,
+  //   // element: <AddWorkoutVideo />,
+  // },
+  // {
+  //   path: "edit-workout-video/:workoutId",
+  //   element: <EditWorkoutVideo />,
+  // },
+  // {
+  //   path: "add-badge",
+  //   element: <AddBadge />,
+  // },
+  // {
+  //   path: "edit-badge/:badgeId",
+  //   element: <EditBadge />,
   // },
 
 
+
   // {
-  //   name: "Driver",
-  //   path: "driver",
-  //   icon: GrUserManager,
-  //   element: <Driver />,
+  //   name: "Settings",
+  //   path: "settings",
+  //   icon: IoSettingsOutline,
+  //   element: <Setting />,
   // },
   // {
-  //   name: "Driver Request",
-  //   path: "driver-request",
-  //   icon: PiLaptopThin,
-  //   element: <DriverRequest />,
+  //   path: "/hosts/:id",
+  //   element: <HostDetails />,
   // },
-  {
-    name: "Subscription",
-    path: "subscription",
-    icon: LuCrown,
-    element: <Subscription />,
-  },
-  {
-    name: "Meals",
-    path: "meals",
-    icon: BiDish,
-    element: <Meals />,
-  },
-  {
-    name: "Exercise ",
-    path: "exercise",
-    icon: PiPersonSimpleBikeBold,
-    element: <Exercise />,
-  },
-  {
-    name: "Workouts",
-    path: "workouts",
-    icon: CiDumbbell,
-    element: <Workouts />,
-  },
-  {
-    name: "Workout Plans",
-    path: "workoutPlans",
-    icon: MdManageHistory,
-    element: <WorkoutPlans />,
-  },
-  {
-    name: "Workout Videos",
-    path: "workout-videos",
-    icon: MdOutlineVideoLibrary,
-    element: <WorkoutVideos />,
-  },
-  {
-    name: "Store",
-    path: "store",
-    icon: PiHandbagSimple,
-    element: <Store />,
-  },
-  {
-    name: "Settings",
-    path: "settings",
-    icon: IoSettingsOutline,
-    element: <Setting />,
-  },
-  {
-    path: "/hosts/:id",
-    element: <HostDetails />,
-  },
-  {
-    name: "Settings",
-    rootPath: "settings",
-    icon: CiSettings,
-    children: [
-      {
-        name: "Personal Information",
-        path: "settings/profile",
-        icon: CiUser,
-        element: <MyProfile />,
-      },
-      {
-        path: "settings/profile/edit",
-        element: <EditMyProfile />,
-      },
-      {
-        name: "Change Password",
-        icon: FaServicestack,
-        path: "settings/change-password",
-        element: <ChangePassword />,
-      },
-      {
-        path: "settings/change-password/forgot-password",
-        element: <ForgotPassword />,
-      },
-      {
-        path: "settings/change-password/forgot-password/verify-email",
-        element: <VerifyEmail />,
-      },
-      {
-        path: "settings/change-password/forgot-password/reset-password",
-        element: <ResetPassword />,
-      },
-      {
-        name: "Terms & Condition",
-        icon: FaServicestack,
-        path: "settings/terms-conditions",
-        element: <TermsConditions />,
-      },
-      {
-        path: "settings/terms-conditions/edit",
-        element: <EditTermsConditions />,
-      },
-      {
-        name: "Privacy Policy",
-        icon: MdOutlineSecurityUpdateWarning,
-        path: "settings/privacy-policy",
-        element: <PrivacyPolicy />,
-      },
-      {
-        path: "settings/privacy-policy/edit",
-        element: <EditPrivacyPolicy />,
-      },
-      {
-        name: "About Us",
-        icon: BiMessageSquareDetail,
-        path: "settings/about-us",
-        element: <Trust />,
-      },
-      {
-        path: "settings/about-us/edit",
-        element: <EditTrust />,
-      },
-    ],
-  },
+  // {
+  //   name: "Settings",
+  //   rootPath: "settings",
+  //   icon: CiSettings,
+  //   children: [
+  //     {
+  //       name: "Personal Information",
+  //       path: "settings/profile",
+  //       icon: CiUser,
+  //       element: <MyProfile />,
+  //     },
+  //     {
+  //       path: "settings/profile/edit",
+  //       element: <EditMyProfile />,
+  //     },
+  //     {
+  //       name: "Change Password",
+  //       icon: FaServicestack,
+  //       path: "settings/change-password",
+  //       element: <ChangePassword />,
+  //     },
+  //     {
+  //       path: "settings/change-password/forgot-password",
+  //       element: <ForgotPassword />,
+  //     },
+  //     {
+  //       path: "settings/change-password/forgot-password/verify-email",
+  //       element: <VerifyEmail />,
+  //     },
+  //     {
+  //       path: "settings/change-password/forgot-password/reset-password",
+  //       element: <ResetPassword />,
+  //     },
+  //     {
+  //       name: "Terms & Condition",
+  //       icon: FaServicestack,
+  //       path: "settings/terms-conditions",
+  //       element: <TermsConditions />,
+  //     },
+  //     {
+  //       path: "settings/terms-conditions/edit",
+  //       element: <EditTermsConditions />,
+  //     },
+  //     {
+  //       name: "Privacy Policy",
+  //       icon: MdOutlineSecurityUpdateWarning,
+  //       path: "settings/privacy-policy",
+  //       element: <PrivacyPolicy />,
+  //     },
+  //     {
+  //       path: "settings/privacy-policy/edit",
+  //       element: <EditPrivacyPolicy />,
+  //     },
+  //     {
+  //       name: "About Us",
+  //       icon: BiMessageSquareDetail,
+  //       path: "settings/about-us",
+  //       element: <Trust />,
+  //     },
+  //     {
+  //       path: "settings/about-us/edit",
+  //       element: <EditTrust />,
+  //     },
+  //   ],
+  // },
 ];

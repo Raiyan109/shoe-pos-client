@@ -10,7 +10,7 @@ import { useGetRecentTransactionsQuery } from "../../../redux/features/transacti
 import moment from "moment";
 import DownloadButton from "../../../Components/React-PDF/DownloadButton";
 
-const Earnings = () => {
+const Categories = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalData, setModalData] = useState({});
   const [searchTerm, setSearchTerm] = useState(""); // State to store search input
@@ -227,4 +227,4 @@ const Earnings = () => {
   )
 }
 
-export default Earnings
+export default Categories
